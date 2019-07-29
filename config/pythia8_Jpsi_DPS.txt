@@ -1,0 +1,66 @@
+# Process of interest
+#HardQCD:all = on
+#SecondHard:generate = on
+
+Charmonium:all = on
+#SecondHard:Charmonium = on
+#SecondHard:generate = on
+
+SecondHard:generate = on
+SecondHard:Charmonium = on
+
+Beams:idB = 2212
+Beams:frameType = 3
+
+# No printing of pythia8 extensive output
+Print:quiet = on
+
+# The next 4 will be overwritten by TGEANT for each event!
+Beams:idA = -211
+#Beams:idA = 2212
+Beams:pxA = 0.
+Beams:pyA = 0.
+#Beams:pzA = 600.
+Beams:pzA = 190.
+
+Beams:pxB = 0.
+Beams:pyB = 0.
+Beams:pzB = 0.
+
+# PDF settings
+#PDF:piSet = LHAPDF6:GRVPI1
+#PDF:pSet  = LHAPDF6:NNPDF23_nlo_as_0119
+PDF:piSet = 1
+PDF:pSet  = 15 #Default 15
+#PDF:piUseLHAPDF = on
+#PDF:piLHAPDFset = GRVPI1
+
+# Radiation switches
+PartonLevel:ISR = on
+PartonLevel:FSR = on
+PartonLevel:MPI = on
+
+# Kinematic selection
+PhaseSpace:pTHatMinDiverge = 0.1
+
+# Beam remnants setting
+BeamRemnants:primordialKT        = on
+BeamRemnants:primordialKTsoft    = 1.1
+BeamRemnants:primordialKThard    = 1.8
+BeamRemnants:halfScaleForKT      = 2.0
+BeamRemnants:halfMassForKT       = 4.0
+BeamRemnants:reducedKTatHighY    = 0.7
+BeamRemnants:primordialKTremnant = 0.4
+
+# Particle decay switch
+#441:onMode = on
+#443:onMode = off
+#445:onMode = off
+#10441:onMode = off
+
+#443:onIfAll = 13 -13
+
+#Options for pn mixing
+#$ISACTIVATED = YES
+$PROCESS     = Jpsi
+#$RATIO       = 1.00
