@@ -14,4 +14,4 @@
 
 ## Links
 
-* [PYTHIA 8.2](http://home.thep.lu.se/~torbjorn/Pythia.html)
+* [PYTHIA](http://home.thep.lu.se/~torbjorn/Pythia.html)
