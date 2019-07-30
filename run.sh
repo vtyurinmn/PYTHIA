@@ -2,4 +2,4 @@
 
 ./build.sh
 
-docker run --rm -it --name=pythia8243-dev pythia8243:dev
+docker run --rm -it --name=pythia-dev pythia:dev

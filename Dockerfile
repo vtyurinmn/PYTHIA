@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:7 as build
 
 WORKDIR /app
 
@@ -15,8 +15,15 @@ RUN tar xvfz ${PYTHIA}.tgz \
 
 WORKDIR /app/${PYTHIA}/examples/
 
-COPY config/* ./
+COPY config/build/* ./
 
-RUN make main201
+RUN make main201 && mv main201 /app/
+
+FROM centos:7
+
+COPY --from=build /app /app
+
+WORKDIR /app
+COPY config/runtime ./
 
 ENTRYPOINT [ "./start.sh" ]

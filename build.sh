@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker build -t pythia8243:dev .
+docker build -t pythia:dev .
 
 if [ $(docker images | grep '<none>' | wc -l) -ne 0 ]
 then
